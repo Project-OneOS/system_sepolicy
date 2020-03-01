@@ -337,7 +337,7 @@ include $(BUILD_SYSTEM)/base_rules.mk
 sepolicy_policy.conf := $(intermediates)/policy.conf
 $(sepolicy_policy.conf): PRIVATE_MLS_SENS := $(MLS_SENS)
 $(sepolicy_policy.conf): PRIVATE_MLS_CATS := $(MLS_CATS)
-$(sepolicy_policy.conf): PRIVATE_TARGET_BUILD_VARIANT := user
+$(sepolicy_policy.conf): PRIVATE_TARGET_BUILD_VARIANT := userdebug
 $(sepolicy_policy.conf): PRIVATE_TGT_ARCH := $(my_target_arch)
 $(sepolicy_policy.conf): PRIVATE_TGT_WITH_ASAN := $(with_asan)
 $(sepolicy_policy.conf): PRIVATE_TGT_WITH_NATIVE_COVERAGE := $(with_native_coverage)
@@ -355,7 +355,7 @@ $(BOARD_VENDOR_SEPOLICY_DIRS) $(BOARD_ODM_SEPOLICY_DIRS))
 sepolicy_policy_2.conf := $(intermediates)/policy_2.conf
 $(sepolicy_policy_2.conf): PRIVATE_MLS_SENS := $(MLS_SENS)
 $(sepolicy_policy_2.conf): PRIVATE_MLS_CATS := $(MLS_CATS)
-$(sepolicy_policy_2.conf): PRIVATE_TARGET_BUILD_VARIANT := user
+$(sepolicy_policy_2.conf): PRIVATE_TARGET_BUILD_VARIANT := userdebug
 $(sepolicy_policy_2.conf): PRIVATE_EXCLUDE_BUILD_TEST := true
 $(sepolicy_policy_2.conf): PRIVATE_TGT_ARCH := $(my_target_arch)
 $(sepolicy_policy_2.conf): PRIVATE_TGT_WITH_ASAN := $(with_asan)
