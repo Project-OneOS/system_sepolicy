@@ -155,7 +155,6 @@ neverallow * {
   -net_radio_prop
   -nfc_prop
   -pan_result_prop
-  -persist_debug_prop
   -powerctl_prop
   -radio_prop
   -restorecon_prop
@@ -251,15 +250,6 @@ compatible_property_only(`
     -coredomain
     -bluetooth
     -hal_bluetooth_server
-  } {
-    bluetooth_prop
-  }:property_service set;
-
-  neverallow {
-    domain
-    -coredomain
-    -bluetooth
-    -hal_bluetooth_server
     -vendor_init
   } {
     exported_bluetooth_prop
@@ -324,15 +314,6 @@ compatible_property_only(`
     -hal_telephony_server
   } {
     radio_prop
-  }:file no_rw_file_perms;
-
-  neverallow {
-    domain
-    -coredomain
-    -bluetooth
-    -hal_bluetooth_server
-  } {
-    bluetooth_prop
   }:file no_rw_file_perms;
 
   neverallow {
@@ -443,7 +424,6 @@ compatible_property_only(`
     -nfc_prop
     -overlay_prop
     -pan_result_prop
-    -persist_debug_prop
     -persistent_properties_ready_prop
     -pm_prop
     -powerctl_prop
