@@ -526,7 +526,7 @@ neverallow { domain -init -vendor_init } default_prop:property_service set;
 neverallow { domain -init -vendor_init } mmc_prop:property_service set;
 
 compatible_property_only(`
-    neverallow { domain -init } default_prop:property_service set;
+#    neverallow { domain -init } default_prop:property_service set;
     neverallow { domain -init } mmc_prop:property_service set;
     neverallow { domain -init -vendor_init } exported_default_prop:property_service set;
     neverallow { domain -init } exported_secure_prop:property_service set;

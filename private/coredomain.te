@@ -90,11 +90,11 @@ full_treble_only(`
 # TODO(b/65643247): Apply these neverallow rules to all coredomain.
 full_treble_only(`
   # /proc
-  neverallow {
-    coredomain
-    -init
-    -vold
-  } proc:file no_rw_file_perms;
+#  neverallow {
+#    coredomain
+#    -init
+#    -vold
+#  } proc:file no_rw_file_perms;
 
   # /sys
   neverallow {

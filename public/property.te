@@ -246,14 +246,14 @@ compatible_property_only(`
     radio_prop
   }:property_service set;
 
-  neverallow {
-    domain
-    -coredomain
-    -bluetooth
-    -hal_bluetooth_server
-  } {
-    bluetooth_prop
-  }:property_service set;
+#  neverallow {
+#    domain
+#    -coredomain
+#    -bluetooth
+#    -hal_bluetooth_server
+#  } {
+#    bluetooth_prop
+#  }:property_service set;
 
   neverallow {
     domain
@@ -326,14 +326,14 @@ compatible_property_only(`
     radio_prop
   }:file no_rw_file_perms;
 
-  neverallow {
-    domain
-    -coredomain
-    -bluetooth
-    -hal_bluetooth_server
-  } {
-    bluetooth_prop
-  }:file no_rw_file_perms;
+#  neverallow {
+#    domain
+#    -coredomain
+#    -bluetooth
+#    -hal_bluetooth_server
+#  } {
+#    bluetooth_prop
+#  }:file no_rw_file_perms;
 
   neverallow {
     domain
